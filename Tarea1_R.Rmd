@@ -1,0 +1,86 @@
+---
+title: "R_Tarea1"
+author: "Mariana Silva"
+date: "26/2/2022"
+output: 
+  html_document:
+    fig_height: 6
+    fight_width: 8
+    theme: journal
+    highlight: zenburn
+    toc: yes
+    toc_depht: 4
+    toc_float:
+      collapsed: no
+      smooth_scroll: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+### Ejercicio 1:
+
+```{r Ejercicio 1}
+# Ejercicio 1:
+
+ciudad <- "Pano"
+
+print(ciudad)
+
+```
+### Ejercicio 2:
+
+
+```{r Ejerc2}
+
+# Ejercicio2:
+
+paises_andes <- c("Chile","Venezuela","Colombia","Perú","Ecuador","Argentina","Bolivia")
+
+
+print(paises_andes)
+
+```
+
+### Ejercicio 3:
+
+```{r Ejerc3}
+
+### Ejercicio3:
+panadería_calorías <- data.frame(listaPanes = seq(1:12),
+                                        rebanada_1Pieza = as.factor(c(rep(0, 10),1, 1)),
+                                        derivados_harina = c("Bolillo","Bollo","Chapati","Brazo_gitano","Conchas","Focaccia","Hojaldre","Hojaldre de manzana","Pastel","Spanakopita","Budin con chocolate","Pan dulce"), 
+                                        calorías = c(125, 203, 120, 100, 35, 142, 262, 285, 296, 140, 240, 380)) #kcal
+panadería_calorías
+```
+### Ejecicio 4:
+
+* Ejecicio 4.1:
+
+```{r Ejerc41}
+
+# Ejercicio 4.1:
+
+# dataset "DNase"
+?DNase
+
+print(head(DNase, 4))
+
+concentration_data1 = subset(DNase, conc >= 0.1 & conc <= 0.2)
+
+print(concentration_data1)
+
+```
+```{r Ejerc42}
+
+# Ejercicio 4.2:
+
+# dataset "DNase"
+
+?DNase
+
+concentration_data2 = subset(DNase, Run != 10 & conc > 0.2 & density <= 1.0)
+
+print(concentration_data2)
+
+```
